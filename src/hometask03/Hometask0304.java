@@ -19,13 +19,13 @@ public class Hometask0304 {
                 System.out.println("31 день");
                 break;
             case 4:
-                System.out.println("30 день");
+                System.out.println("30 дней");
                 break;
             case 5:
                 System.out.println("31 день");
                 break;
             case 6:
-                System.out.println("30 день");
+                System.out.println("30 дней");
                 break;
             case 7:
                 System.out.println("31 день");
