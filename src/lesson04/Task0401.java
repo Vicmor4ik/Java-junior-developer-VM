@@ -14,7 +14,7 @@ public class Task0401 {
         while (scanner.hasNextInt()&&(userInput = scanner.nextInt())>0){
             sum +=userInput;
             countOfÒNumbers ++;
-            if(userInput>0){
+            if(userInput>max){
                 max=userInput;
             }
         }
