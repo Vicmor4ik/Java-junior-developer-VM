@@ -5,7 +5,6 @@ public class Hometask0602 {
     public static void main(String[] args) {
         String Test1 = "mamamilaramu";
         String Test2 = "ramumilamama";
-        char test;
         int sum1 = 0;
         int sum2 = 0;
         char[] chars1 = Test1.toCharArray();
@@ -13,10 +12,10 @@ public class Hometask0602 {
         if (Test1.length() != Test2.length()) System.out.println(Test1 + " и " + Test2 + " - не анаграммы");
         else {
             for (int j = 0; j < chars1.length; j++) {
-                sum1 += (int) chars1[j];
+                sum1 += chars1[j];
             }
             for (int i = 0; i < chars2.length; i++) {
-                sum2 += (int) chars2[i];
+                sum2 += chars2[i];
             }
             if (sum1 == sum2) {
                 System.out.println(Test1 + " и " + Test2 + " - анаграммы");
@@ -29,5 +28,6 @@ public class Hometask0602 {
 // Ќе знаю как реализовать доп проверку, ведь могут быть ситуации когда одинаковое
 // количество символов даст одинаковую сумму, но внутри они будут разные (9,3,4) и (7,5,4)
 // либо нужно куда-то их складывать и провер€ть. ѕыталс€ привести одну строку к массиву и поочереди проверить каждый символ через String.contains,
-// но не разобралс€ как ему передать chars[i], пробовал напр€мую и через переменную в которой сохран€л значени€.
+// но не разобралс€ как ему передать chars[i]. ѕробовал напр€мую и через переменную в которой сохран€л значени€. ≈сли перебирать посимвольно
+// из одного массива символы другого, то как-будто в этом нет логики. ≈сли строки будут большими мы будем перебирать N раз N символов
 
