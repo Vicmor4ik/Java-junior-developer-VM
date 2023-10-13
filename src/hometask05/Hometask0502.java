@@ -1,5 +1,6 @@
 package hometask05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hometask0502 {
@@ -12,22 +13,20 @@ public class Hometask0502 {
         int neg = 0;
         while (true) {
             userInput = scanner.nextInt();
-            if (userInput > 0) {
+            if (userInput > 0 && (pos < posArr.length)) {
                 posArr[pos] = userInput;
                 pos++;
-                continue;
-            } else if (userInput < 0) {
+            }
+            if (userInput < 0 && (neg<negArr.length)){
                 negArr[neg] = userInput;
                 neg++;
-                continue;
-            }else if ((posArr[posArr.length-1]!=0 && negArr[negArr.length-1]!=0)||userInput==0){
-                for (int i = 0; i < posArr.length; i++) {
-                    System.out.print(posArr[i]+ ", ");
-                }
-                for (int i = 0; i < negArr.length; i++) {
-                    System.out.print(negArr[i] + ", ");
-                }
+            }
+            if (userInput==0 || (pos==5&&neg==5)){
+                System.out.println(Arrays.toString(posArr));
+                System.out.println(Arrays.toString(negArr));
+                break;
             }
         }
+
     }
 }
