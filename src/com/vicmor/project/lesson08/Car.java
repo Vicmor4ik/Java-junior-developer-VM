@@ -14,8 +14,5 @@ public class Car extends Vehicle {
     public void setColor(String color) {
         if (color!=null) this.color = color;
     }
-    @Override
-    public void repair(){
-            super.repair();
-    }
+
 }

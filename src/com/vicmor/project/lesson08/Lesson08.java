@@ -14,5 +14,8 @@ public class Lesson08 {
 
         Bicycle bVehicle02 = (Bicycle) vehicle;
 
+        Scooter scooter = new Scooter("1111", 40, true);
+
+
     }
 }

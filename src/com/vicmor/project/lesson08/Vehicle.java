@@ -1,6 +1,6 @@
 package com.vicmor.project.lesson08;
 
-public class Vehicle {
+abstract public class Vehicle {
     protected String number; // null
     protected int levelOfWare; // 0
     protected int maxSpeed = 120; // 120

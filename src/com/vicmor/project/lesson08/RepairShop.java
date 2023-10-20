@@ -1,11 +1,13 @@
 package com.vicmor.project.lesson08;
 
-import java.util.Random;
-
 public class RepairShop {
     // в массив можно добавить тип Vehicle и все его подтипы
     private Vehicle[] vehicles;
     private String[] colors = {"красный", "жёлтый", "оранжевый", "чёрный"};
+
+    public RepairShop(int countOfVehicles) {
+        vehicles = new Vehicle[countOfVehicles];
+    }
 
     public void addToVehicles(Vehicle vehicle) {
         for (int i = 0; i < vehicles.length; i++) {
@@ -16,18 +18,17 @@ public class RepairShop {
     }
 
     public void repairAll() {
-        for (Vehicle vehicle : vehicles) {
-
-            vehicle.repair();
-            if (vehicle instanceof Car car) {
+        for (int i = 0; i < vehicles.length; i++) {
+            vehicles[i].repair();
+            if (vehicles[i] instanceof Car) {
                 int random = (int) (Math.random() * colors.length);
-                car.setColor(colors[random]);
+                ((Car) vehicles[i]).setColor(colors[random]);
             }
-                if (vehicle instanceof Train train) {
-                    train.changeClimateControl();
-                }
-               vehicle=null;
+            if (vehicles[i] instanceof Train) {
+                ((Train) vehicles[i]).changeClimateControl();
             }
+            vehicles[i] = null;
         }
+
     }
-    // Не понимаю как обнулить объект. В такой записи среда говорит что я глупость написал
+}
