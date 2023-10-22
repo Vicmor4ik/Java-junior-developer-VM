@@ -10,12 +10,16 @@ public class WildAnimal extends Animal{
     public void setStrength(int strength) {
         this.strength = strength;
     }
+
+    public WildAnimal(String name, double age,int strength) {
+        super(name,age);
+        this.strength = strength;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof WildAnimal)) return false;
-
-        WildAnimal wildAnimal = (WildAnimal) o;
+        if (!(o instanceof WildAnimal wildAnimal)) return false;
 
         return strength== wildAnimal.getStrength();
     }
