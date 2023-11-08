@@ -31,6 +31,7 @@ public class MyLinkedList<T> {
             first.setPreviousNode(newNode);
             first = newNode;
             size++;
+
         }
     }
 

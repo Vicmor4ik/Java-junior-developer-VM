@@ -23,6 +23,7 @@ public class Test {
         System.out.println();
         linkedList.print();
 
+
     }
 
 
